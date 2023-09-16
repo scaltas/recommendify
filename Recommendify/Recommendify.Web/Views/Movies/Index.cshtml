@@ -1,0 +1,23 @@
+﻿@model Recommendify.Web.ViewModels.MovieViewModel
+
+<div class="container">
+    <div class="row">
+        @foreach (var movie in Model.Movies)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://image.tmdb.org/t/p/original/@movie.PosterPath" class="card-img-top" alt="@movie.Title Poster">
+                    <div class="card-body">
+                        <h5 class="card-title">@movie.Title</h5>
+                        <p class="card-text">@movie.Overview</p>
+                        <p class="card-text"><strong>Release Date:</strong> @movie.ReleaseDate.Value.ToShortDateString()</p>
+                        <p class="card-text"><strong>Genre:</strong> @string.Join(", ", movie.Genres.Select(g => g.Name))</p>
+
+                        <!-- Display the rating -->
+                        <p class="card-text"><strong>Rating:</strong> @movie.VoteAverage</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
