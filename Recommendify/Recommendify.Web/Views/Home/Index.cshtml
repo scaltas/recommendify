@@ -1,8 +1,84 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<style>
+    .home-tile {
+        transition: transform 0.2s;
+        cursor: pointer;
+        text-align: center;
+        padding: 20px;
+        background-color: #f5f5f5;
+        border: 1px solid #ccc;
+        width: calc(33.33% - 20px); /* Set the width for each tile */
+        margin: 10px; /* Add a small margin between tiles */
+    }
+
+        .home-tile img {
+            max-width: 100%; /* Ensure the image fills the width of the tile */
+            max-height: 100%; /* Ensure the image fills the height of the tile */
+        }
+
+        .home-tile:hover {
+            transform: scale(1.05);
+        }
+
+    .tile-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+</style>
+
+<div class="container">
+    <h1>Welcome to Recommendify</h1>
+    <p>Your go-to source for recommendations.</p>
+
+    <div class="tile-container">
+        <div class="home-tile">
+            <a href="/Movies/Index">
+                <img src="https://via.placeholder.com/150/FF5733/000000?text=Movies" alt="Movies">
+            </a>
+        </div>
+        <div class="home-tile">
+            <a href="/TVSeries/Index">
+                <img src="https://via.placeholder.com/150/2980B9/FFFFFF?text=TV+Series" alt="TV Series">
+            </a>
+        </div>
+        <div class="home-tile">
+            <a href="/Books/Index">
+                <img src="https://via.placeholder.com/150/27AE60/FFFFFF?text=Books" alt="Books">
+            </a>
+        </div>
+        <div class="home-tile">
+            <a href="/PCGames/Index">
+                <img src="https://via.placeholder.com/150/F39C12/FFFFFF?text=PC+Games" alt="PC Games">
+            </a>
+        </div>
+        <div class="home-tile">
+            <a href="/Meals/Index">
+                <img src="https://via.placeholder.com/150/E74C3C/FFFFFF?text=Meals" alt="Meals">
+            </a>
+        </div>
+        <div class="home-tile">
+            <a href="/Music/Index">
+                <img src="https://via.placeholder.com/150/9B59B6/FFFFFF?text=Music" alt="Music">
+            </a>
+        </div>
+        <div class="home-tile">
+            <a href="/Science/Index">
+                <img src="https://via.placeholder.com/150/1ABC9C/FFFFFF?text=Science" alt="Science">
+            </a>
+        </div>
+        <div class="home-tile">
+            <a href="/Sports/Index">
+                <img src="https://via.placeholder.com/150/E67E22/FFFFFF?text=Sports" alt="Sports">
+            </a>
+        </div>
+        <div class="home-tile">
+            <a href="/History/Index">
+                <img src="https://via.placeholder.com/150/34495E/FFFFFF?text=History" alt="History">
+            </a>
+        </div>
+    </div>
 </div>

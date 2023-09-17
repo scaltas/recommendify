@@ -10,7 +10,8 @@
                     <div class="card-body">
                         <h5 class="card-title">@movie.Title</h5>
                         <p class="card-text">@movie.Overview</p>
-                        <p class="card-text"><strong>Release Date:</strong> @movie.ReleaseDate.Value.ToShortDateString()</p>
+                        <p class="card-text"><strong>Release Date:</strong> @movie.ReleaseDate?.ToShortDateString()
+                        </p>
                         <p class="card-text"><strong>Genre:</strong> @string.Join(", ", movie.Genres.Select(g => g.Name))</p>
 
                         <!-- Display the rating -->
